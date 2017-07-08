@@ -16,16 +16,6 @@ h3, h4 {
 .container {
     padding: 80px 120px;
 }
-.person {
-    border: 10px solid transparent;
-    margin-bottom: 25px;
-    width: 80%;
-    height: 80%;
-    opacity: 0.7;
-}
-.person:hover {
-    border-color: #f1f1f1;
-}
 .carousel-inner img {
     /*-webkit-filter: grayscale(90%);*/
     filter: grayscale(50%); /* make all photos black and white */ 
@@ -35,36 +25,23 @@ h3, h4 {
     max-height:100%;
     margin: auto;
 }
+.carousel-caption {
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    z-index: 20;
+    color: white;
+    text-shadow: 0 5px 5px rgba(0,0,0,.6);
+    font-weight: bold;
+}
 .carousel-caption h3, h1{
     color: #fff !important;
 }
-@media (max-width: 600px) {
-  .carousel-caption {
-    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-  }
+#onCarousel {
+   font-size: 5rem;  
 }
-.bg-1 {
-    background: #2d2d30;
-    color: #bdbdbd;
-}
-.bg-1 h3 {color: #fff;}
-.bg-1 p {font-style: italic;}
-.list-group-item:first-child {
-    border-top-right-radius: 0;
-    border-top-left-radius: 0;
-}
-.list-group-item:last-child {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-}
-.thumbnail {
-    padding: 0 0 15px 0;
-    border: none;
-    border-radius: 0;
-}
-.thumbnail p {
-    margin-top: 15px;
-    color: #555;
+.col-md-4 {
+    padding: 10px 10px 10px 10px;
 }
 .btn {
     padding: 10px 20px;
@@ -78,23 +55,8 @@ h3, h4 {
     background-color: #fff;
     color: #000;
 }
-.modal-header, h4, .close {
-    background-color: #333;
-    color: #fff !important;
-    text-align: center;
-    font-size: 30px;
-}
-.modal-header, .modal-body {
-    padding: 40px 50px;
-}
 .nav-tabs li a {
     color: #777;
-}
-#googleMap {
-    width: 100%;
-    height: 400px;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
 }  
 .navbar {
     font-family: Montserrat, sans-serif;
@@ -145,17 +107,4 @@ footer a:hover {
 }
 textarea {
     resize: none;
-}
-
-.carousel-caption {
-    position: absolute;
-    top: 40%;
-    left: 20%;
-    z-index: 20;
-    color: white;
-    text-shadow: 0 5px 5px rgba(0,0,0,.6);
-    font-weight: bold;
-}
-.col-md-4 {
-    padding: 10px 10px 10px 10px;
 }
