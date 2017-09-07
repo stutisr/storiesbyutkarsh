@@ -5,11 +5,136 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="utkarsh.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;
+      background-color: rgba(255,255,255,.5)
+
+  }
+  h1 {
+    font-size: 7rem;
+    font-family: Montserrat;
+  }
+  
+  h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;      
+      color: #111;
+  }
+  .container {
+      padding: 80px 120px;
+  }
+  .carousel-inner img {
+      /*-webkit-filter: grayscale(90%);*/
+      /* make all photos black and white */ 
+      /*filter: grayscale(50%); */
+      height:100%;
+      width:100%;
+      max-width:100%;
+      max-height:100%;
+      margin: auto;
+  }
+  .carousel-caption h3, h1{
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #666;
+      background-color: #fff;
+      color: #000;
+  }
+
+  #googleMap {
+      width: 100%;
+      height: 400px;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+  }  
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand { 
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red !important;
+  }
+
+  footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 32px;
+  }
+
+  footer a {
+      color: #f5f5f5;
+  }
+
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  }  
+  .form-control {
+      border-radius: 0;
+  }
+
+  textarea {
+      resize: none;
+  }
+
+  .carousel-caption {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  z-index: 20;
+  color: white;
+  text-shadow: 0 5px 5px rgba(0,0,0,.6);
+  font-weight: bold;
+  }
+  .col-md-4 {
+    padding: 10px 10px 10px 10px;
+  }
+  </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
@@ -21,13 +146,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#myPage">UTROXX</a>
+      <a class="navbar-brand" href="#myPage">UTKARSH</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#myPage">HOME</a></li>
-        <li><a href="#band">ARTIST</a></li>
-        <li><a href="#tour">MUSIC</a></li>
+        <li><a href="#about">ARTIST</a></li>
+        <li><a href="#videos">MUSIC</a></li>
         <li><a href="#contact">CONTACT</a></li>
       </ul>
     </div>
@@ -45,21 +170,21 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="golu.jpg" alt="Utkarsh playing guitar">
+        <img src="golu.jpg" alt="Utkarsh">
         <div class="carousel-caption">
           <h1>Utkarsh Srivastava</h1>
-          <p id="onCarousel">Creating music. Knitting stories.</p>
-          <a href="#about" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-user" style="text-shadow: none"></span>
+          <p>Creating music. Knitting stories.</p>
+          <a href="#about" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-user" style="text-shadow: none" target="#about"></span>
          Know Me </a>
            
         </div>      
       </div>
 
       <div class="item">
-        <img src="golumoments.jpg" alt="Utkarsh with Reka">
+        <img src="golumoments.jpg" alt="Guitar Utkarsh">
         <div class="carousel-caption">
           <h1>New Single out now!</h1>
-          <p id="onCarousel">Moments After Silence</p>
+          <p>Moments After Silence</p>
           <a href="https://www.youtube.com/watch?v=uhaCp480umw" class="btn btn-default btn-lg" target="_blank">
           <span class="glyphicon glyphicon-play" style="text-shadow: none"></span><span id="play"> Watch Here!</span>
         </a>
@@ -68,7 +193,7 @@
       </div>
     
       <div class="item">
-        <img src="goluphoto.JPG" alt="Utkarsh with Guitar">
+        <img src="golu12.jpwg" alt="Utkarsh">
         <div class="carousel-caption">
           <h1>Music and More!</h1>
           <a href="#contact" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-mail" style="text-shadow: none"></span>
@@ -92,21 +217,21 @@
 <div id="about" class="container text-center">
   <h3>MEET UTKARSH</h3>
   <p><em>"..And there I sat, by the endless sea..music rushing through my veins like the sea breeze"</em></p>
-  <p>Hello there! I am a singer-songwriter from the northern plains of India. I've been playing the guitar for about 11 years now. I play the percussive fingerstyle acoustic guitar. I write songs about social changes, humanity and inner battles. I quit my job and got into music full time very recently to be more involved in the art and utilise this potential for bigger things that matter. This is my portal where I connect with the world and share all that I have learnt and created over the years. I hope you are enchanted! Cheers!
+  <p>Hello there! I am a singer-songwriter from the northern plains of India. I've been playing the guitar for about 11 years now. I play the percussive fingerstyle acoustic guitar. I write songs about social changes, humanity and inner battles. An engineering graduate, I quit my job and got into music full time very recently to be more involved in the art and utilise this potential for bigger things that matter. This is my portal where I connect with the world and share all that I have learnt and created over the years. I hope you are enchanted! Cheers!
  </p>
   <br>
   <div class="row">
   <h3>Featured In</h3>
-    <div class="col-sm-6">
+    <div class="col-sm-12">
       <p class="text-center"></p><br>
-      <a href="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Frollingstoneindia%2Fposts%2F10154477242426471">
-        <img src="default-rollingstone.jpg" alt="Rolling Stone" width="255" height="255">
+      <a href="https://www.facebook.com/rollingstoneindia/posts/10154477242426471" target="_blank">
+        <img src="rollingstone.png" alt="Rolling Stone" width="475" height="255">
       </a>
     </div>
-    <div class="col-sm-6">
+    <div class="col-sm-12">
       <p class="text-center"></p><br>
-      <a href="http://in.askmen.com/weekend-playlist/1116480/article/askmen-indias-top-10-weekend-playlist">
-        <img src="askmen.png" alt="Random Name" width="255" height="255">
+      <a href="http://in.askmen.com/weekend-playlist/1116480/article/askmen-indias-top-10-weekend-playlist" target="_blank">
+        <img src="askmen.png" alt="AskMen" width="475" height="255">
       </a>
     </div>
   </div>
@@ -157,6 +282,7 @@
     </div>
     <div class="col-md-8">
       <div class="row">
+      <form method="post" action="mail.php">
         <div class="col-sm-6 form-group">
           <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
         </div>
@@ -168,9 +294,10 @@
       <br>
       <div class="row">
         <div class="col-md-12 form-group">
-          <button class="btn pull-right" type="submit">Send</button>
+          <button class="btn pull-right" type="submit" value="submit">Send</button>
         </div>
       </div>
+      </form>
     </div>
   </div>
   <br>
